@@ -6,6 +6,8 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+lib/
+
 /.idea
 /.out
 *.class
@@ -55,3 +57,4 @@ build/
 .vscode/
 
 *~
+lib/
