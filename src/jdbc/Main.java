@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("🔄 Запуск программы...");
+        System.out.println("Запуск программы...");
 
         // Создаем объект сервиса, который взаимодействует с DAO
         UserService userService = new UserServiceImpl();
