@@ -41,10 +41,10 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.executeUpdate();
-            System.out.println("✅ Таблица 'users' успешно удалена!");
+            System.out.println("Таблица 'users' успешно удалена!");
         } catch (SQLException e) {
             e.printStackTrace();
-            System.err.println("❌ Ошибка при удалении таблицы!");
+            System.err.println("Ошибка при удалении таблицы!");
         }
     }
 
@@ -58,10 +58,10 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
             statement.setByte(3, user.getAge());
 
             statement.executeUpdate();
-            System.out.println("✅ Пользователь " + user.getName() + " добавлен в базу данных.");
+            System.out.println("Пользователь " + user.getName() + " добавлен в базу данных.");
         } catch (SQLException e) {
             e.printStackTrace();
-            System.err.println("❌ Ошибка при добавлении пользователя!");
+            System.err.println("Ошибка при добавлении пользователя!");
         }
     }
 
@@ -73,13 +73,13 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
             int rowsAffected = statement.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("✅ Пользователь с ID " + id + " удалён.");
+                System.out.println("Пользователь с ID " + id + " удалён.");
             } else {
-                System.out.println("⚠ Пользователь с ID " + id + " не найден.");
+                System.out.println("Пользователь с ID " + id + " не найден.");
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            System.err.println("❌ Ошибка при удалении пользователя!");
+            System.err.println("Ошибка при удалении пользователя!");
         }
     }
 
@@ -100,7 +100,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            System.err.println("❌ Ошибка при получении списка пользователей!");
+            System.err.println("Ошибка при получении списка пользователей!");
         }
 
         return users;
@@ -111,10 +111,10 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.executeUpdate();
-            System.out.println("✅ Таблица 'users' очищена.");
+            System.out.println("Таблица 'users' очищена.");
         } catch (SQLException e) {
             e.printStackTrace();
-            System.err.println("❌ Ошибка при очистке таблицы!");
+            System.err.println("Ошибка при очистке таблицы!");
         }
     }
 
@@ -122,11 +122,11 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
         try {
             if (connection != null && !connection.isClosed()) {
                 connection.close();
-                System.out.println("🔌 Соединение с БД закрыто.");
+                System.out.println("Соединение с БД закрыто.");
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            System.err.println("⚠ Ошибка при закрытии соединения!");
+            System.err.println("Ошибка при закрытии соединения!");
         }
     }
 }
